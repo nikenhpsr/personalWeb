@@ -2,7 +2,6 @@ import ContactSection from "@/components/Contacts";
 import HighlightedArticles from "@/components/HighlightedArticles";
 import HighlightedProjects from "@/components/HighlightedProjects";
 import IntroSection from "@/components/Introduction";
-import Navbar from "@/components/Navbar";
 import Head from "next/head";
 
 export default function Home() {

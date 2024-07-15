@@ -1,15 +1,18 @@
 "use client";
 import Link from "next/link";
-import { useEffect, useState } from "react";
+import { useState } from "react";
 
 const Navbar = () => {
   // Detect if the user has set a preference and listen for changes
-  const [theme, setTheme] = useState(() =>
-    window.matchMedia &&
-    window.matchMedia("(prefers-color-scheme: dark)").matches
-      ? "dark"
-      : "light"
-  );
+  const [theme, setTheme] = useState(() => {
+    if (typeof window !== "undefined") {
+      return window.matchMedia &&
+        window.matchMedia("(prefers-color-scheme: dark)").matches
+        ? "dark"
+        : "light";
+    }
+    return "light"; // Default theme if window is not available
+  });
 
   const toggleTheme = () => {
     const newTheme = theme === "light" ? "dark" : "light";
