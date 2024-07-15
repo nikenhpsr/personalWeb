@@ -10,9 +10,9 @@ const Navbar = () => {
         <Link href="/projects" className="p-2 m-2 hover:text-slate-400">
           Projects
         </Link>
-        <Link href="/experiences" className="p-2 m-2 hover:text-slate-400">
+        {/* <Link href="/experiences" className="p-2 m-2 hover:text-slate-400">
           Experiences
-        </Link>
+        </Link> */}
         <Link href="/articles" className="p-2 m-2 hover:text-slate-400">
           Articles
         </Link>
