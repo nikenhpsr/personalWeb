@@ -1,113 +1,104 @@
-import Image from "next/image";
+import ContactSection from "@/components/Contacts";
+import HighlightedArticles from "@/components/HighlightedArticles";
+import HighlightedProjects from "@/components/HighlightedProjects";
+import IntroSection from "@/components/Introduction";
+import Navbar from "@/components/Navbar";
+import Head from "next/head";
 
 export default function Home() {
   return (
-    <main className="flex min-h-screen flex-col items-center justify-between p-24">
-      <div className="z-10 w-full max-w-5xl items-center justify-between font-mono text-sm lg:flex">
-        <p className="fixed left-0 top-0 flex w-full justify-center border-b border-gray-300 bg-gradient-to-b from-zinc-200 pb-6 pt-8 backdrop-blur-2xl dark:border-neutral-800 dark:bg-zinc-800/30 dark:from-inherit lg:static lg:w-auto  lg:rounded-xl lg:border lg:bg-gray-200 lg:p-4 lg:dark:bg-zinc-800/30">
-          Get started by editing&nbsp;
-          <code className="font-mono font-bold">src/app/page.tsx</code>
-        </p>
-        <div className="fixed bottom-0 left-0 flex h-48 w-full items-end justify-center bg-gradient-to-t from-white via-white dark:from-black dark:via-black lg:static lg:size-auto lg:bg-none">
-          <a
-            className="pointer-events-none flex place-items-center gap-2 p-8 lg:pointer-events-auto lg:p-0"
-            href="https://vercel.com?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            By{" "}
-            <Image
-              src="/vercel.svg"
-              alt="Vercel Logo"
-              className="dark:invert"
-              width={100}
-              height={24}
-              priority
-            />
-          </a>
-        </div>
-      </div>
-
-      <div className="relative z-[-1] flex place-items-center before:absolute before:h-[300px] before:w-full before:-translate-x-1/2 before:rounded-full before:bg-gradient-radial before:from-white before:to-transparent before:blur-2xl before:content-[''] after:absolute after:-z-20 after:h-[180px] after:w-full after:translate-x-1/3 after:bg-gradient-conic after:from-sky-200 after:via-blue-200 after:blur-2xl after:content-[''] before:dark:bg-gradient-to-br before:dark:from-transparent before:dark:to-blue-700 before:dark:opacity-10 after:dark:from-sky-900 after:dark:via-[#0141ff] after:dark:opacity-40 sm:before:w-[480px] sm:after:w-[240px] before:lg:h-[360px]">
-        <Image
-          className="relative dark:drop-shadow-[0_0_0.3rem_#ffffff70] dark:invert"
-          src="/next.svg"
-          alt="Next.js Logo"
-          width={180}
-          height={37}
-          priority
+    <>
+      <Head>
+        <title>
+          Niken Hapsari | Actuarial Science Grad Turned Software Engineer –
+          Business Savvy and Client-Focused
+        </title>
+        <meta
+          name="description"
+          content="Dive into Niken Hapsari's journey from actuarial science to software engineering. Explore her portfolio showcasing projects, web and mobile app development skills, and unique business insights."
         />
-      </div>
+        <meta
+          name="keywords"
+          content=" Software Engineer, Web Developer, AI/ML Engineer, Backend Developer, Mobile App Developer, Actuarial Science, Programming, Portfolio, Business Acumen, Client Satisfaction"
+        />
+        <meta
+          property="og:title"
+          content="Niken Hapsari | Actuarial Science Grad Turned Software Engineer – Business Savvy and Client-Focused"
+        />
+        <meta
+          property="og:description"
+          content="Discover Niken Hapsari's journey from actuarial science to software engineering. Explore her projects, skills, and professional experience."
+        />
+        <meta property="og:type" content="website" />
+        <meta property="og:url" content="https://www.nikenhapsari.my.id/" />
+        <meta
+          property="og:image"
+          content="https://www.nikenhapsari.my.id/og-image.jpg"
+        />
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:creator" content="@NikenHapsari" />
+        <meta
+          name="twitter:title"
+          content="Niken Hapsari | Actuarial Science Grad Turned Software Engineer – Business Savvy and Client-Focused"
+        />
+        <meta
+          name="twitter:description"
+          content="Explore Niken Hapsari's journey from actuarial science to software engineering. See her projects, skills, and experience in technology."
+        />
+        <meta
+          name="twitter:image"
+          content="https://www.nikenhapsari.my.id/twitter-image.jpg"
+        />
+        {/* <!-- LinkedIn Meta Tags --> */}
+        <meta
+          property="linkedin:title"
+          content="Niken Hapsari | Actuarial Science Grad Turned Software Engineer – Business Savvy and Client-Focused"
+        />
+        <meta
+          property="linkedin:description"
+          content="Discover Niken Hapsari's journey from actuarial science to software engineering. Explore her projects, skills, and professional experience."
+        />
+        <meta
+          property="linkedin:url"
+          content="https://www.linkedin.com/in/nikenhapsari/"
+        />
+        <meta
+          property="linkedin:image"
+          content="https://www.nikenhapsari.com/linkedin-image.jpg"
+        />
 
-      <div className="mb-32 grid text-center lg:mb-0 lg:w-full lg:max-w-5xl lg:grid-cols-4 lg:text-left">
-        <a
-          href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className="mb-3 text-2xl font-semibold">
-            Docs{" "}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className="m-0 max-w-[30ch] text-sm opacity-50">
-            Find in-depth information about Next.js features and API.
-          </p>
-        </a>
+        {/* <!-- GitHub Meta Tags --> */}
+        <meta
+          property="github:title"
+          content="Niken Hapsari | Software Engineer"
+        />
+        <meta
+          property="github:description"
+          content="Explore Niken Hapsari's GitHub portfolio featuring her projects and contributions in software development."
+        />
+        <meta property="github:url" content="https://github.com/nikenhpsr" />
+        <meta
+          property="github:image"
+          content="https://www.nikenhapsari.com/github-image.jpg"
+        />
 
-        <a
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className="mb-3 text-2xl font-semibold">
-            Learn{" "}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className="m-0 max-w-[30ch] text-sm opacity-50">
-            Learn about Next.js in an interactive course with&nbsp;quizzes!
-          </p>
-        </a>
+        {/* <!-- Mail Meta Tags --> */}
+        <meta name="email" content="hpsri.niken@gmail.com" />
+        <meta name="email:subject" content="Contact Niken Hapsari" />
+        <meta
+          name="email:body"
+          content="Hi Niken, I visited your portfolio and would like to discuss..."
+        />
 
-        <a
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className="mb-3 text-2xl font-semibold">
-            Templates{" "}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className="m-0 max-w-[30ch] text-sm opacity-50">
-            Explore starter templates for Next.js.
-          </p>
-        </a>
-
-        <a
-          href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className="mb-3 text-2xl font-semibold">
-            Deploy{" "}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className="m-0 max-w-[30ch] text-balance text-sm opacity-50">
-            Instantly deploy your Next.js site to a shareable URL with Vercel.
-          </p>
-        </a>
-      </div>
-    </main>
+        <link rel="canonical" href="https://www.nikenhapsari.my.id/" />
+      </Head>
+      <main className="my-4">
+        {/* <Navbar /> */}
+        <IntroSection />
+        <ContactSection />
+        <HighlightedProjects />
+        <HighlightedArticles />
+      </main>
+    </>
   );
 }
