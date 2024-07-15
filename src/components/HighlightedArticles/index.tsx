@@ -8,6 +8,7 @@ const HighlightedArticles = () => {
         "A deep dive into the world of React Hooks and how they can revolutionize your component development.",
       link: "https://example.com/article/react-hooks",
       tags: ["React", "Hooks", "JavaScript"],
+      publishedDate: "2021-04-12",
     },
     {
       title: "Advanced CSS Techniques",
@@ -15,6 +16,7 @@ const HighlightedArticles = () => {
         "Explore advanced CSS techniques for creating visually stunning web pages.",
       link: "https://example.com/article/advanced-css",
       tags: ["CSS", "Design", "Web"],
+      publishedDate: "2021-06-05",
     },
     {
       title: "Efficient Database Management",
@@ -22,6 +24,7 @@ const HighlightedArticles = () => {
         "Learn about efficient database management strategies to optimize your application's performance.",
       link: "https://example.com/article/database-management",
       tags: ["Database", "Performance", "Management"],
+      publishedDate: "2021-08-23",
     },
   ];
 
@@ -33,10 +36,11 @@ const HighlightedArticles = () => {
           <a
             key={index}
             href={article.link}
-            className="list border p-4 rounded-lg hover:bg-gray-700 hover:translate-x-4"
+            className="list border p-4 rounded-lg hover:bg-slate-200 dark:hover:bg-gray-700 hover:translate-x-4"
           >
             <h3 className="text-xl font-semibold">{article.title}</h3>
             <p className="mt-2">{article.summary}</p>
+            <p className="text-xs my-2">Published on {article.publishedDate}</p>
             <div className="mt-4">
               {article.tags.map((tag, tagIndex) => (
                 <span
