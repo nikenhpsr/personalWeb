@@ -13,14 +13,20 @@ jobs:
       - name: Checkout code
         uses: actions/checkout@v3
 
+      - name: Install pnpm 🔨
+        run: npm i -g pnpm
+
       - name: Setup Node.js ⚙️
         uses: actions/setup-node@v4
         with:
           node-version: "14"
-          cache: "npm"
+          cache: "pnpm"
+
+      - name: Add npm global bin to PATH
+        run: echo "::add-path::$(npm bin -g)"
+
+      - name: Verify pnpm installation
+        run: pnpm --version
 
       - name: Install dependencies 🔧
-        run: npm install
-
-      - name: Verify npm installation
-        run: npm --version
+        run: pnpm install --frozen-lockfile
