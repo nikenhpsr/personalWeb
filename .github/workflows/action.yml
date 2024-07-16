@@ -10,9 +10,6 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      - name: Checkout code
-        uses: actions/checkout@v3
-
       - name: Install pnpm 🔨
         run: npm i -g pnpm
 
@@ -22,8 +19,8 @@ jobs:
           node-version: "20"
           cache: "pnpm"
 
-      - name: Add npm global bin to PATH
-        run: echo "::add-path::$(npm bin -g)"
+      #   - name: Add npm global bin to PATH
+      #     run: echo "::add-path::$(npm bin -g)"
 
       - name: Verify pnpm installation
         run: pnpm --version
