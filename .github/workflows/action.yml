@@ -26,4 +26,7 @@ jobs:
         run: pnpm --version
 
       - name: Install dependencies 🔧
-        run: pnpm install --frozen-lockfile
+        run: pnpm install
+
+      - name: List files in the repository root
+        run: ls -la
