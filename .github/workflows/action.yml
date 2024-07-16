@@ -25,8 +25,8 @@ jobs:
       - name: Verify pnpm installation
         run: pnpm --version
 
-      - name: Install dependencies 🔧
-        run: pnpm install
-
       - name: List files in the repository root
         run: ls -la
+
+      - name: Install dependencies 🔧
+        run: pnpm install
