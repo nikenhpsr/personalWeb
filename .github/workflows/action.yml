@@ -14,7 +14,10 @@ jobs:
         run: npm i -g pnpm
 
       - name: see current folder
-        run: pwd
+        run: ls /home/runner/work/personalWeb/personalWeb
+
+      - name: see current folder -r
+        run: ls ./home/runner/work/personalWeb
 
       - name: Setup Node.js ⚙️
         uses: actions/setup-node@v4
@@ -23,9 +26,6 @@ jobs:
 
       #   - name: Add npm global bin to PATH
       #     run: echo "::add-path::$(npm bin -g)"
-
-      - name: Change to project directory (if necessary)
-        run: cd ./
 
       - name: Verify pnpm installation
         run: pnpm --version
