@@ -31,8 +31,14 @@ jobs:
         with:
           static_site_generator: next
 
+      - name: Install pnpm 🔧
+        run: npm install -g pnpm
+
+      - name: Install dependencies 🔧
+        run: pnpm install
+
       - name: Build with Next.js 🏗️
-        run: pnpx next build
+        run: pnpm build
 
       - name: Upload artifact 📡
         uses: actions/upload-pages-artifact@v3
