@@ -13,8 +13,8 @@ jobs:
       - name: Install pnpm 🔨
         run: npm i -g pnpm
 
-      - name: List files in the repository root
-        run: ls -la
+      - name: see current folder
+        run: pwd
 
       - name: Setup Node.js ⚙️
         uses: actions/setup-node@v4
@@ -23,6 +23,9 @@ jobs:
 
       #   - name: Add npm global bin to PATH
       #     run: echo "::add-path::$(npm bin -g)"
+
+      - name: Change to project directory (if necessary)
+        run: cd ./
 
       - name: Verify pnpm installation
         run: pnpm --version
