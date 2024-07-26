@@ -36,7 +36,7 @@ const HighlightedArticles = () => {
           <a
             key={index}
             href={article.link}
-            className="list border p-4 rounded-lg hover:bg-slate-200 dark:hover:bg-gray-700 hover:translate-x-4"
+            className="list border p-4 rounded-lg hover:bg-slate-200 hover:text-white dark:hover:bg-gray-700 hover:translate-x-4"
           >
             <h3 className="text-xl font-semibold">{article.title}</h3>
             <p className="mt-2">{article.summary}</p>

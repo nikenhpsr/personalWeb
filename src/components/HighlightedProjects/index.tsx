@@ -26,7 +26,7 @@ const HighlightedProjects = () => {
         {projects.map((project, index) => (
           <div
             key={index}
-            className="list border p-4 rounded-lg hover:translate-x-4 hover:bg-slate-200 dark:hover:bg-gray-700"
+            className="list border p-4 rounded-lg hover:translate-x-4 hover:bg-slate-200 hover:text-white dark:hover:bg-gray-700"
           >
             <h3 className="text-xl font-semibold">{project.name}</h3>
             <p className="my-2">{project.description}</p>
