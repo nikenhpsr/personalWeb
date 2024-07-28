@@ -119,14 +119,14 @@ const ListOfArticles = () => {
   );
 
   return (
-    <section className="my-8 flex flex-col items-center justify-center">
+    <section className="my-8 flex flex-col items-start justify-center w-10/12 mx-auto">
       <h2 className="text-2xl font-bold mb-4">Articles</h2>
-      <div className="flex flex-col space-y-4 w-1/2">
+      <div className="flex flex-col space-y-4 w-full ">
         {selectedArticles.map((article, index) => (
           <a
             key={index}
             href={article.link}
-            className="list border p-4 rounded-lg hover:bg-slate-200 dark:hover:bg-gray-700 hover:translate-x-4"
+            className="list border p-4 rounded-lg hover:bg-slate-200 hover:text-white dark:hover:bg-gray-700 hover:translate-x-4"
           >
             <h3 className="text-xl font-semibold">{article.title}</h3>
             <p className="mt-2">{article.summary}</p>
@@ -144,7 +144,7 @@ const ListOfArticles = () => {
           </a>
         ))}
       </div>
-      <div className="flex mt-4 gap-6">
+      <div className="flex justify-center mt-4 gap-6 w-full">
         <button
           className="hover:text-slate-400"
           onClick={handlePreviousClick}

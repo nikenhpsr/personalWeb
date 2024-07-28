@@ -20,9 +20,9 @@ const HighlightedProjects = () => {
   ];
 
   return (
-    <section className="mt-8 mb-4 text-center flex flex-col items-center justify-center ">
+    <section className="mt-8 mb-4 text-center flex flex-col items-start justify-center mx-auto w-10/12 ">
       <h2 className="text-2xl font-bold mb-4">Highlighted Projects</h2>
-      <div className="flex flex-col space-y-4 w-1/2">
+      <div className="flex flex-col space-y-4 w-full">
         {projects.map((project, index) => (
           <div
             key={index}

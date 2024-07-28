@@ -29,9 +29,9 @@ const HighlightedArticles = () => {
   ];
 
   return (
-    <section className="my-8 flex flex-col items-center justify-center">
+    <section className="my-8 flex flex-col items-start justify-center mx-auto w-10/12">
       <h2 className="text-2xl font-bold mb-4">Articles</h2>
-      <div className="flex flex-col space-y-4 w-1/2">
+      <div className="flex flex-col space-y-4 w-full">
         {articles.slice(0, 3).map((article, index) => (
           <a
             key={index}

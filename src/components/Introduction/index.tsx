@@ -1,7 +1,7 @@
 const IntroSection = () => {
   return (
-    <section className="flex flex-col items-center justify-center mt-8 mb-4 text-center">
-      <div className="w-1/2">
+    <section className="flex flex-col items-center justify-center mt-8 mb-4 text-left">
+      <div className="w-10/12">
         <h1 className="text-3xl font-bold">
           Hi, I&apos;m Niken Hapsari{" "}
           <span className="text-sm font-normal">she/her</span>

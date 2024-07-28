@@ -12,7 +12,7 @@ const Articles = () => {
   return (
     <section>
       <div className="flex flex-col items-center justify-center">
-        <div className="w-1/2 my-4">
+        <div className="w-10/12 my-4">
           <input
             type="text"
             value={searchQuery}
